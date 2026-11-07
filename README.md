@@ -9,6 +9,19 @@ In [Baseline 3], the DSST scale estimation algorithm is added to the original KC
 - Numba (needed if you want to use the hog feature)
 - OpenCV (ensure that you can import cv2 in python)
 
+## Tests
+
+With the requirements installed, run the offline regression tests on Python 3:
+
+```sh
+python -m unittest discover -s tests -v
+```
+
+The tests use real NumPy, Numba and OpenCV to exercise HOG feature extraction,
+normalization/PCA, and tracker initialization and repeated updates, including
+the demo's DSST configuration. They use synthetic images and do not open a
+camera or display windows. They do not benchmark tracking accuracy on videos.
+
 ## Baseline
 Some implementations of KCF and DSST algorithms.
 

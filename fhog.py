@@ -171,7 +171,7 @@ def getFeatureMaps(image, k, mapp):
 	r, alfa = func1(dx, dy, boundary_x, boundary_y, height, width, numChannels) #with @jit
 	### ~0.001s
 
-	nearest = np.ones((k), np.int)
+	nearest = np.ones((k), int)
 	nearest[0:k//2] = -1
 
 	w = np.zeros((k, 2), np.float32)
